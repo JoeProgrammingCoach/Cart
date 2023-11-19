@@ -1,0 +1,18 @@
+import { useState, useEffect } from 'react'
+
+import './App.css'
+
+function Bill({grapes, bananas, apples, bananasPrice, applesPrice, grapesPrice}){
+
+console.log(grapes * grapesPrice * 100)
+   
+  return (
+    <>
+      <div>Your Total Bill:
+        <h2> ${(Math.ceil((grapes * grapesPrice * 100))+ Math.ceil((apples * applesPrice* 100)) + Math.ceil((bananasPrice * bananas *100)))/100}</h2>
+      </div>
+</>
+  )
+}
+
+export default Bill
