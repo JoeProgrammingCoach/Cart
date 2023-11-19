@@ -1,0 +1,41 @@
+import { useState, useEffect } from 'react'
+import Item from "./Item"
+import Logo from "./Logo"
+import Bill from "./Bill"
+
+import DisplayTotals from "./DisplayTotals"
+import './App.css'
+
+function App({src, fruit, setFruit, bananasTotal, grapesTotal, applesTotal}) {
+ const [grapes, setGrapes] = useState(0)
+  const [apples, setApples] = useState(0)
+  const [bananas, setBananas] = useState(0)
+
+  const [grapesPrice, setGrapesPrice] = useState(0)
+  const [applesPrice, setApplesPrice] = useState(0)
+  const [bananasPrice, setBananasPrice] = useState(0)
+
+//const totalProduceCost = 
+useEffect( ()=> {
+  setGrapesPrice(2.15)
+  setApplesPrice(1.85)
+setBananasPrice(0.49)
+
+},[])
+
+
+  return (
+    <>
+    <Logo/>
+    <DisplayTotals grapesPrice={grapesPrice} applesPrice={applesPrice} bananasPrice={bananasPrice}></DisplayTotals>
+  <Item  fruit = {apples} setFruit={setApples} >Apple</Item>
+  <Item fruit = {bananas} setFruit={setBananas} >Banana</Item>
+  <Item  fruit = {grapes} setFruit={setGrapes}  >Grapes</Item>
+  <br></br>
+  <Bill bananasPrice={bananasPrice} applesPrice={applesPrice} grapesPrice={grapesPrice}
+  grapes={grapes} apples={apples} bananas={bananas}></Bill>
+    </>
+  )
+}
+
+export default App
