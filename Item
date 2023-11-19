@@ -1,0 +1,37 @@
+import { useState, useEffect } from 'react'
+
+import './App.css'
+
+
+function Item({children, fruit, setFruit, perPound}) {
+
+function specificFruitTotal(){
+   fruit * perPound
+}
+
+
+function grapesTotal(){
+
+}
+
+function applesTotal() {
+
+}
+
+function bananasTotal() {
+
+}
+
+  return (
+    <>
+    <div>
+    <h5 >{children}</h5>
+    <input type="number" onChange={(e)=>{setFruit(Math.ceil(Number(e.target.value)))}}>
+   
+    </input><span> subtotal:</span>
+      </div>
+    </>
+  )
+}
+
+export default Item
