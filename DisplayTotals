@@ -1,0 +1,17 @@
+import { useState, useEffect } from 'react'
+
+import './App.css'
+
+function DisplayTotals({bananasPrice, grapesPrice, applesPrice}){
+
+  return (
+    <>
+      <h4>Current Produce prices are:</h4>
+     <p>bananas price per lb: ${bananasPrice}</p>
+      <p>grapes price per lb: ${grapesPrice }</p>
+      <p>apples price per lb: ${applesPrice}</p>
+</>
+  )
+}
+
+export default DisplayTotals
